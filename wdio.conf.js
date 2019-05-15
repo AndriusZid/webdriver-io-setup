@@ -1,6 +1,7 @@
 exports.config = {
     // Override the default path of /wd/hub
     path: '/',
+    port: 9515,
     //
     // ====================
     // Runner Configuration
@@ -53,7 +54,7 @@ exports.config = {
         // 5 instances get started at a time.
         maxInstances: 5,
         //
-        browserName: 'firefox',
+        browserName: 'chrome',
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
