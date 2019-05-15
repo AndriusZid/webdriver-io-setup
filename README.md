@@ -17,6 +17,13 @@ npm install
 
 ## Run tests
 
+In separate terminal start gecko driver with this command:
+
+```
+./geckodriver.exe --port 4444
+```
+
+And run test in that browser with this command:
 ```
 npm run test
 ```
