@@ -1,6 +1,8 @@
+import setup from './setup';
+
 describe('sum cubes', () => {
     beforeAll(() => {
-        browser.url('https://4ark.me/2048/');
+        browser.url(setup.url);
         browser.waitForVisible('.tile.new-tile');
     });
 

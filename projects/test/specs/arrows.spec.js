@@ -1,8 +1,9 @@
+import setup from './setup';
 const { percySnapshot } = require('@percy/webdriverio')
 
 describe("Test all arrow", () => {
   beforeAll(() => {
-    browser.url("https://4ark.me/2048/");
+    browser.url(setup.url);
     browser.waitForVisible(".tile.new-tile");
     
   });

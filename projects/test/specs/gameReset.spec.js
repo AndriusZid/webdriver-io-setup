@@ -1,8 +1,9 @@
+import setup from './setup';
 const assert = require('assert');
 
 describe('Game reset tests', () => {
     beforeAll(() => {
-        browser.url('https://4ark.me/2048/');
+        browser.url(setup.url);
         browser.pause(1000);
     });
 

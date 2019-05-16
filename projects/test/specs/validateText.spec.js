@@ -1,9 +1,10 @@
+import setup from './setup';
 const { percySnapshot } = require('@percy/webdriverio')
 
 describe('Testing the static text in Game intro', () => {
 
     beforeAll(() => {
-        browser.url('https://4ark.me/2048/');
+        browser.url(setup.url);
         browser.waitForVisible('.tile.new-tile');
     });
 
