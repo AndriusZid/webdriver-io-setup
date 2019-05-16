@@ -1,6 +1,6 @@
 const { percySnapshot } = require('@percy/webdriverio')
 
-xdescribe('Testing the static text in Game intro', () => {
+describe('Testing the static text in Game intro', () => {
 
     beforeAll(() => {
         browser.url('https://4ark.me/2048/');
@@ -21,12 +21,17 @@ xdescribe('Testing the static text in Game intro', () => {
 
         const aboveGameTextColor = browser.$('.above-game').getCssProperty('color');
         expect(aboveGameTextColor.parsed.hex).toBe('#776e65', 'Text above game color is #776e65');
-    })
+    });
 
     it ('should display properly New Game button', () => {
         const newGameButton = browser.$('.restart-btn').getText();
         expect(newGameButton).toBe('New Game');
         percySnapshot(browser, 'Initial texts and colors');
         browser.pause(10000);
-    })
+    });
+
+    it ('should display game footer', () => {
+        const footerText = browser.$('.footer').getText();
+        expect(footerText).toBe('Crafted with by @4Ark/GitHub');
+    });
 });
