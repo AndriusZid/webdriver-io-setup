@@ -1,10 +1,11 @@
 const { percySnapshot } = require('@percy/webdriverio')
 
-xdescribe('Integration test with visual testing', () => {
+describe('Integration test with visual testing', () => {
     it('Loads the hame page and takes snapshot to compare with previous version site', () => {
       browser.url('https://4ark.me/2048/');
-      //percySnapshot(browser, 'gameboard');
-      //browser.pause(10000);
+      browser.pause(10000);
+      percySnapshot(browser, 'gameboard');
+      browser.pause(1000);
       browser.waitForVisible('.tile.new-tile');
 
       browser.keys("Up arrow");
@@ -15,6 +16,8 @@ xdescribe('Integration test with visual testing', () => {
   
       browser.pause(1000);  
       browser.refresh();
-      browser.pause(1000); 
+      browser.pause(10000); 
+      percySnapshot(browser, 'gameboard');
+      browser.pause(1000);
     })
   })

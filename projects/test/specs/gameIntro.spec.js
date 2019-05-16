@@ -1,10 +1,13 @@
 const { percySnapshot } = require('@percy/webdriverio')
 
-xdescribe('Testing the static text in Game intro', () => {
+describe('Testing the static text in Game intro', () => {
 
     beforeAll(() => {
         browser.url('https://4ark.me/2048/');
         browser.waitForVisible('.tile.new-tile');
+        browser.pause(10000);
+        percySnapshot(browser, 'gameboard');
+        browser.pause(1000);
     });
 
     it('Game intro should have the right text', () => {

@@ -1,7 +1,10 @@
+const { percySnapshot } = require('@percy/webdriverio')
+
 describe("Test all arrow", () => {
   beforeAll(() => {
     browser.url("https://4ark.me/2048/");
     browser.waitForVisible(".tile.new-tile");
+    
   });
 
   it("Should test if right works properly", () => {
@@ -13,6 +16,10 @@ describe("Test all arrow", () => {
 
     browser.refresh();
     browser.pause(500);
+
+    browser.pause(10000);
+    percySnapshot(browser, 'right arrow');
+    browser.pause(1000);
 
     browser.keys("Right arrow");
     browser.pause(500);
@@ -41,6 +48,10 @@ describe("Test all arrow", () => {
     browser.refresh();
     browser.pause(500);
 
+    browser.pause(10000);
+    percySnapshot(browser, 'left arrow');
+    browser.pause(1000);
+
     browser.keys("Left arrow");
     browser.pause(500);
 
@@ -68,6 +79,10 @@ describe("Test all arrow", () => {
     browser.refresh();
     browser.pause(500);
 
+    browser.pause(10000);
+    percySnapshot(browser, 'up arrow');
+    browser.pause(1000);
+
     browser.keys("Up arrow");
     browser.pause(500);
 
@@ -94,6 +109,10 @@ describe("Test all arrow", () => {
 
     browser.refresh();
     browser.pause(500);
+
+    browser.pause(10000);
+    percySnapshot(browser, 'down arrow');
+    browser.pause(1000);
 
     browser.keys("Down arrow");
     browser.pause(500);
