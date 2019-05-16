@@ -37,19 +37,4 @@ describe('Testing the static text in Game intro', () => {
         const newScore = bestContainer.substring(5);
         expect(newScore).toBe('0', "Best default value is incorrect");
     });
-
-    it('2 tiles have values as 2 by default.', () => {
-        const tileContainer = browser.$('.tile-container');
-        const tile1 = tileContainer.$$('div')[0].getText();
-        expect(tile1).toBe('2', "Tile 1 value is not 2.");
-        const tile2 = tileContainer.$$('div')[1].getText();
-        expect(tile2).toBe('2', "Tile 2 value is not 2.");
-    });
-
-    it('There are displayed only 2 tiles by default.', () => {
-        const tileContainer = browser.$('.tile-container');
-        const tileCount = tileContainer.$$('div').length;
-        expect(tileCount).toBe(2, "There are different number of tiles than 2 by default.");
-    });
-
 });
