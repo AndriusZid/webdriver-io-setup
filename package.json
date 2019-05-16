@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "gulp test -p",
-    "visual": "percy exec -- wdio wdio.conf.js"
+    "test": "gulp test -p test",
+    "visual": "percy exec -- npm run test"
   },
   "author": "",
   "license": "ISC",
