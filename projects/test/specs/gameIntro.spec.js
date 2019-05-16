@@ -1,6 +1,6 @@
 const { percySnapshot } = require('@percy/webdriverio')
 
-describe('Testing the static text in Game intro', () => {
+xdescribe('Testing the static text in Game intro', () => {
 
     beforeAll(() => {
         browser.url('https://4ark.me/2048/');
