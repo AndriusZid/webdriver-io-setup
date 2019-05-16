@@ -38,4 +38,18 @@ describe('Testing the static text in Game intro', () => {
         expect(newScore).toBe('0');
     });
 
+    it('2 tiles have values as 2 by default.', () => {
+        const tileContainer = browser.$('.tile-container');
+        const tile1 = tileContainer.$$('div')[0].getText();
+        expect(tile1).toBe('2');
+        const tile2 = tileContainer.$$('div')[1].getText();
+        expect(tile2).toBe('2');
+    });
+
+    it('There are displayed only 2 tiles.', () => {
+        const tileContainer = browser.$('.tile-container');
+        const tileCount = tileContainer.$$('div').length;
+        expect(tileCount).toBe(2);
+    });
+
 });
