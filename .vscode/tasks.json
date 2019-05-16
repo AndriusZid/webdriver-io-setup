@@ -6,7 +6,7 @@
         {
             "label": "test single",
             "type": "shell",
-            "command": "npm test -- --spec ${relativeFile}",
+            "command": "npm test test",
             "group": {
                 "kind": "build",
                 "isDefault": true

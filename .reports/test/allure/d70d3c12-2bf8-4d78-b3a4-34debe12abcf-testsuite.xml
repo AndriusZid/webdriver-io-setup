@@ -1,0 +1,140 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1558001194526' stop='1558001206265'>
+    <name>Testing the static text in Game intro</name>
+    <title>Testing the static text in Game intro</title>
+    <test-cases>
+        <test-case start='1558001195908' status='passed' stop='1558001196101'>
+            <name>Game intro should have the right text</name>
+            <title>Game intro should have the right text</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+                <parameter kind='environment-variable' name='capabilities' value='{"browserName":"chrome","chromeOptions":{"args":["--start-maximized"]}}'/>
+                <parameter kind='environment-variable' name='spec files' value='["C:\\Users\\GerdaMonkeviciute\\Dev\\igap\\webdriver-io-setup\\projects\\test\\specs\\gameIntro.spec.js"]'/>
+            </parameters>
+            <steps>
+                <step start='1558001195920' status='passed' stop='1558001196025'>
+                    <name>POST /wd/hub/session/c5ba2601-a82d-40c4-a05e-1cad0839d656/element</name>
+                    <title>POST /wd/hub/session/c5ba2601-a82d-40c4-a05e-1cad0839d656/element</title>
+                    <attachments>
+                        <attachment title='Request' source='079d8134-9552-4804-bccd-fe8cdf350510-attachment.json' type='application/json' size='57'/>
+                        <attachment title='Response' source='b143de18-6704-4d6c-afc6-a37d46f9d606-attachment.json' type='application/json' size='222'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1558001196027' status='passed' stop='1558001196069'>
+                    <name>GET /wd/hub/session/c5ba2601-a82d-40c4-a05e-1cad0839d656/element/0/text</name>
+                    <title>GET /wd/hub/session/c5ba2601-a82d-40c4-a05e-1cad0839d656/element/0/text</title>
+                    <attachments>
+                        <attachment title='Response' source='678640d0-6f28-40c9-a48e-00867717f311-attachment.json' type='application/json' size='214'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1558001196070' status='passed' stop='1558001196083'>
+                    <name>POST /wd/hub/session/c5ba2601-a82d-40c4-a05e-1cad0839d656/element</name>
+                    <title>POST /wd/hub/session/c5ba2601-a82d-40c4-a05e-1cad0839d656/element</title>
+                    <attachments>
+                        <attachment title='Request' source='bbc33fcd-b26e-4252-a3c6-1182d4d8bfd7-attachment.json' type='application/json' size='57'/>
+                        <attachment title='Response' source='9a8bd0b4-dc2f-4f94-a4ab-87a5246b4d47-attachment.json' type='application/json' size='221'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1558001196084' status='passed' stop='1558001196099'>
+                    <name>GET /wd/hub/session/c5ba2601-a82d-40c4-a05e-1cad0839d656/element/0/css/color</name>
+                    <title>GET /wd/hub/session/c5ba2601-a82d-40c4-a05e-1cad0839d656/element/0/css/color</title>
+                    <attachments>
+                        <attachment title='Response' source='46f06064-c5f7-40fe-a9ad-4cc43de92036-attachment.json' type='application/json' size='216'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1558001196101' status='passed' stop='1558001196171'>
+            <name>Text above game should be the same</name>
+            <title>Text above game should be the same</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+                <parameter kind='environment-variable' name='capabilities' value='{"browserName":"chrome","chromeOptions":{"args":["--start-maximized"]}}'/>
+                <parameter kind='environment-variable' name='spec files' value='["C:\\Users\\GerdaMonkeviciute\\Dev\\igap\\webdriver-io-setup\\projects\\test\\specs\\gameIntro.spec.js"]'/>
+            </parameters>
+            <steps>
+                <step start='1558001196102' status='passed' stop='1558001196120'>
+                    <name>POST /wd/hub/session/c5ba2601-a82d-40c4-a05e-1cad0839d656/element</name>
+                    <title>POST /wd/hub/session/c5ba2601-a82d-40c4-a05e-1cad0839d656/element</title>
+                    <attachments>
+                        <attachment title='Request' source='c67a74bd-0733-4d93-bb8a-a77119462ff7-attachment.json' type='application/json' size='59'/>
+                        <attachment title='Response' source='539ebe9a-5a4a-4ebd-8832-d5c46687e678-attachment.json' type='application/json' size='221'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1558001196121' status='passed' stop='1558001196142'>
+                    <name>GET /wd/hub/session/c5ba2601-a82d-40c4-a05e-1cad0839d656/element/1/text</name>
+                    <title>GET /wd/hub/session/c5ba2601-a82d-40c4-a05e-1cad0839d656/element/1/text</title>
+                    <attachments>
+                        <attachment title='Response' source='4f0784ad-fbfe-4c14-b547-35dd54381638-attachment.json' type='application/json' size='236'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1558001196143' status='passed' stop='1558001196157'>
+                    <name>POST /wd/hub/session/c5ba2601-a82d-40c4-a05e-1cad0839d656/element</name>
+                    <title>POST /wd/hub/session/c5ba2601-a82d-40c4-a05e-1cad0839d656/element</title>
+                    <attachments>
+                        <attachment title='Request' source='02b9c579-c702-4baa-acf2-ddbdc2d35b77-attachment.json' type='application/json' size='59'/>
+                        <attachment title='Response' source='8e6a6e71-db6d-422e-b0d7-1f2cf728b63e-attachment.json' type='application/json' size='222'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1558001196158' status='passed' stop='1558001196171'>
+                    <name>GET /wd/hub/session/c5ba2601-a82d-40c4-a05e-1cad0839d656/element/1/css/color</name>
+                    <title>GET /wd/hub/session/c5ba2601-a82d-40c4-a05e-1cad0839d656/element/1/css/color</title>
+                    <attachments>
+                        <attachment title='Response' source='b6e80d0b-45e7-4440-be23-8b395130e84c-attachment.json' type='application/json' size='215'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1558001196171' status='passed' stop='1558001206254'>
+            <name>should display properly New Game button</name>
+            <title>should display properly New Game button</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+                <parameter kind='environment-variable' name='capabilities' value='{"browserName":"chrome","chromeOptions":{"args":["--start-maximized"]}}'/>
+                <parameter kind='environment-variable' name='spec files' value='["C:\\Users\\GerdaMonkeviciute\\Dev\\igap\\webdriver-io-setup\\projects\\test\\specs\\gameIntro.spec.js"]'/>
+            </parameters>
+            <steps>
+                <step start='1558001196172' status='passed' stop='1558001196189'>
+                    <name>POST /wd/hub/session/c5ba2601-a82d-40c4-a05e-1cad0839d656/element</name>
+                    <title>POST /wd/hub/session/c5ba2601-a82d-40c4-a05e-1cad0839d656/element</title>
+                    <attachments>
+                        <attachment title='Request' source='abfd60c4-6864-4ccc-9e71-1257032a02d7-attachment.json' type='application/json' size='60'/>
+                        <attachment title='Response' source='7748bb1e-c101-4f6a-9763-104c117d4389-attachment.json' type='application/json' size='222'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1558001196191' status='passed' stop='1558001196209'>
+                    <name>GET /wd/hub/session/c5ba2601-a82d-40c4-a05e-1cad0839d656/element/2/text</name>
+                    <title>GET /wd/hub/session/c5ba2601-a82d-40c4-a05e-1cad0839d656/element/2/text</title>
+                    <attachments>
+                        <attachment title='Response' source='33bd9953-274a-4534-842b-09e885a6a581-attachment.json' type='application/json' size='202'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

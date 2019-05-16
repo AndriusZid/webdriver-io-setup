@@ -1,0 +1,26 @@
+{
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      ["@babel/plugin-transform-runtime"],
+      ["@babel/plugin-proposal-object-rest-spread", { "useBuiltIns": true }],
+      "@babel/plugin-proposal-class-properties",
+      [
+        "module-resolver",
+        {
+          "root": ["./tests"],
+          "alias": {
+            "~": "./tests"
+          }
+        }
+      ]
+    ]
+  }

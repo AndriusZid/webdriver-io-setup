@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Integration_test_with_visual_testing" timestamp="2019-05-16T13:06:19" time="10.322" tests="1" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0d6fd01e092fcfde26d340146dfcc432"/>
+      <property name="suiteName" value="Integration test with visual testing"/>
+      <property name="capabilities" value="chrome"/>
+      <property name="file" value=".\projects\test\specs\gameBoard.spec.js"/>
+    </properties>
+    <testcase classname="chrome.Integration_test_with_visual_testing" name="Loads_the_hame_page_and_takes_snapshot_to_compare_with_previous_version_site" time="10.318"/>
+  </testsuite>
+</testsuites>
