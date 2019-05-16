@@ -4,7 +4,7 @@ describe('sum cubes', () => {
         browser.waitForVisible('.tile.new-tile');
     });
 
-    it('should sum all cubes', () => {
+    it('should sum all cubes from 4 to 512', () => {
         browser.localStorage('POST', { 
             key: 'gameState',
             value: '{"cell":[{"val":2,"index":0},{"val":2,"index":1},{"val":4,"index":2},{"val":4,"index":3},{"val":8,"index":4},{"val":8,"index":5},{"val":16,"index":6},{"val":16,"index":7},{"val":32,"index":8},{"val":32,"index":9},{"val":64,"index":10},{"val":64,"index":11},{"val":128,"index":12},{"val":128,"index":13},{"val":256,"index":14},{"val":256,"index":15}],"socre":4}'
@@ -52,5 +52,42 @@ describe('sum cubes', () => {
         expect(browser.getText('.tile[data-val="256"]')).toBe('256');
         expect(browser.getText('.tile[data-val="512"]')).toBe('512');
         expect(browser.getText('.tile[data-val="2"]')).toBe('2', 'should add new cube');
+    });
+
+    it('should sum all cubes from 512 to 1024', () => {
+        browser.pause(1000);
+        browser.localStorage('POST', { 
+            key: 'gameState',
+            value: '{"cell":[{"val":512,"index":0},{"val":512,"index":1},{"val":1024,"index":2},{"val":1024,"index":3},{"val":0,"index":4},{"val":0,"index":5},{"val":0,"index":6},{"val":0,"index":7},{"val":0,"index":8},{"val":0,"index":9},{"val":0,"index":10},{"val":0,"index":11},{"val":0,"index":12},{"val":0,"index":13},{"val":0,"index":14},{"val":0,"index":15}],"socre":4}'
+        });
+        browser.refresh();
+        browser.pause(500);
+        browser.keys("Right arrow");
+        browser.pause(500);
+
+        const gameState = browser.localStorage('GET', 'gameState');
+        expect(gameState.value).toBe('', 'should clear local storage after winning');
+
+        expect(browser.isVisible('.tile[data-val="1024"]')).toBe(true);
+        expect(browser.isVisible('.tile[data-val="2048"]')).toBe(true);
+
+        expect(browser.getText('.tile[data-val="1024"]')).toBe('1024');
+        expect(browser.getText('.tile[data-val="2048"]')).toBe('2048'); 
+    });
+
+    it('when moving 2048 should win', () => {
+        browser.pause(1000);
+        browser.localStorage('POST', { 
+            key: 'gameState',
+            value: '{"cell":[{"val":2048,"index":0},{"val":2048,"index":1},{"val":1024,"index":2},{"val":1024,"index":3},{"val":0,"index":4},{"val":0,"index":5},{"val":0,"index":6},{"val":0,"index":7},{"val":0,"index":8},{"val":0,"index":9},{"val":0,"index":10},{"val":0,"index":11},{"val":0,"index":12},{"val":0,"index":13},{"val":0,"index":14},{"val":0,"index":15}],"socre":4}'
+        });
+        browser.refresh();
+        browser.pause(500);
+        browser.keys("Down arrow");
+        browser.pause(500);
+
+        expect(browser.$$('.tile[data-val="2048"]').length).toBe(2);
+
+        expect(browser.getText('.winning-container p:last-child')).toBe('WINNING');
     });
 });
