@@ -73,6 +73,8 @@ describe('sum cubes', () => {
 
         expect(browser.getText('.tile[data-val="1024"]')).toBe('1024');
         expect(browser.getText('.tile[data-val="2048"]')).toBe('2048'); 
+
+        expect(browser.getText('.winning-container p:last-child')).toBe('WINNING');
     });
 
     it('when moving 2048 should win', () => {
