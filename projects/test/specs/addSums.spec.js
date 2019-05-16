@@ -15,7 +15,8 @@ describe('sum cubes', () => {
         browser.pause(500);
 
         expect(browser.$$('.tile.new-tile').length).toBe(16, 'should appear 16 cubes');
-
+        expect(browser.getCssProperty('.tile[data-val="64"]', 'background-color')[0].parsed.hex).toBe('#f65e3b', 'should not change color');
+        
         browser.keys("Right arrow");
         browser.pause(500);
 
@@ -69,6 +70,9 @@ describe('sum cubes', () => {
 
         const gameState = browser.localStorage('GET', 'gameState');
         expect(gameState.value).toBe('', 'should clear local storage after winning');
+
+        // expect(browser.getCssProperty('.tile[data-val="1024"]', 'background-color')).toBe(true);
+        // expect(browser.getCssProperty('.tile[data-val="2048"]', 'background-color')).toBe(true);
 
         expect(browser.isVisible('.tile[data-val="1024"]')).toBe(true);
         expect(browser.isVisible('.tile[data-val="2048"]')).toBe(true);
