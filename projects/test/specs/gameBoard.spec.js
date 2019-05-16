@@ -5,7 +5,7 @@ describe('Integration test with visual testing', () => {
       browser.url('https://4ark.me/2048/');
       //percySnapshot(browser, 'gameboard');
       //browser.pause(10000);
-      browser.pause(1000);
+      browser.waitForVisible('.tile.new-tile');
 
       browser.keys("Up arrow");
       browser.keys("Down arrow");

@@ -4,7 +4,7 @@ describe('Testing the static text in Game intro', () => {
 
     beforeAll(() => {
         browser.url('https://4ark.me/2048/');
-        browser.pause(1000);
+        browser.waitForVisible('.tile.new-tile');
     });
 
     it('Title 2048 text is correct.', () => {

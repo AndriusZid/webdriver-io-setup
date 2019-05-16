@@ -4,7 +4,7 @@ describe('Testing the static text in Game intro', () => {
 
     beforeAll(() => {
         browser.url('https://4ark.me/2048/');
-        browser.pause(1000);
+        browser.waitForVisible('.tile.new-tile');
     });
 
     it('Game intro should have the right text', () => {
@@ -34,4 +34,10 @@ describe('Testing the static text in Game intro', () => {
         const footerText = browser.$('.footer').getText();
         expect(footerText).toBe('Crafted with by @4Ark/GitHub');
     });
+
+    it ('should display grid with 16 cells', () => {
+        const gridCellCount = browser.$$('.grid-cell').length;
+        expect(gridCellCount).toBe(16);
+    });
+
 });
